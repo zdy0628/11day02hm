@@ -3,7 +3,7 @@
   <div class="back" @click="back">
       <span class="iconfont iconjiantou2"></span>
   </div>
-  <div class="title"><slot><slot ></div>
+  <div class="title"><slot></slot></div>
   <div class="extra"></div>
   </div>
 </template>
