@@ -1,5 +1,9 @@
 <template>
-  <div>登陆组件</div>
+  <div>
+    登陆组件
+    <span class="iconfont icondianzan"></span>
+    <span class="iconfont iconweixin"></span>
+  </div>
 </template>
 
 <script>
