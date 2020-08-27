@@ -1,8 +1,6 @@
 <template>
   <div>
-    登陆组件
-    <span class="iconfont icondianzan"></span>
-    <span class="iconfont iconweixin"></span>
+   <hm-header>登陆</hm-header>
   </div>
 </template>
 
