@@ -31,6 +31,12 @@
 
 <script>
 export default {
+  created () {
+    // console.log(this.$route)
+    const { username, password } = this.$route.query
+    this.username = username
+    this.password = password
+  },
   methods: {
     async login () {
       const res = await this.$axios.post('/login', {
@@ -67,7 +73,7 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 .tips {
   padding: 15px;
   font-size: 16px;
@@ -76,5 +82,4 @@ export default {
     color: orange;
   }
 }
-
 </style>
