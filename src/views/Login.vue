@@ -43,12 +43,16 @@ export default {
         username: this.username,
         password: this.password
       })
-      const { statusCode, message } = res.data
+      const { statusCode, message, data } = res.data
       if (statusCode === 200) {
         this.$toast.success(message)
         // 保存token
+        localStorage.setItem('token', data.token)
+        localStorage.setItem('userId', data.user.id)
         // 跳转到个人中心
-        this.$router.push('/user')
+        this.$router.push({
+          path: '/user'
+        })
       } else {
         this.$toast.fail(message)
       }
