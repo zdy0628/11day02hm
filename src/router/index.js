@@ -4,6 +4,8 @@ import VueRouter from 'vue-router'
 import Login from '../views/Login.vue'
 import Register from '../views/Register.vue'
 import User from '../views/User.vue'
+import UserEdit from '../views/UserEdit.vue'
+import Demo from '../views/Demo.vue'
 
 Vue.use(VueRouter)
 
@@ -16,7 +18,9 @@ VueRouter.prototype.push = function push (location) {
 const routes = [
   { path: '/login', component: Login, name: 'login' },
   { path: '/register', component: Register, name: 'register' },
-  { path: '/user', component: User, name: 'user' }
+  { path: '/user', component: User, name: 'user' },
+  { path: '/user-edit', component: UserEdit, name: 'user-edit' },
+  { path: '/demo', component: Demo }
 ]
 
 const router = new VueRouter({
@@ -36,10 +40,9 @@ const router = new VueRouter({
 //     next()
 //   }
 // })
-
 router.beforeEach(function (to, from, next) {
   const token = localStorage.getItem('token')
-  // 需要拦截所有页面
+  // 需要拦截的所有页面
   const authUrls = ['/user', '/user-edit']
   if (!authUrls.includes(to.path) || token) {
     next()
