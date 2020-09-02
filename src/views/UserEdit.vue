@@ -93,7 +93,7 @@ export default {
     async getUserInfo () {
       const userId = localStorage.getItem('userId')
       const res = await this.$axios.get(`/user/${userId}`)
-      console.log(res)
+      // console.log(res)
       const { statusCode, data } = res.data
       if (statusCode === 200) {
         this.user = data
