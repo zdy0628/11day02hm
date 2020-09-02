@@ -25,7 +25,7 @@
           <template>我的跟贴</template>
         <template #content>跟贴/回复</template>
       </hm-navitem>
-      <hm-navitem>
+      <hm-navitem to="/mystar">
           <template>我的收藏</template>
         <template #content>文章/视频</template>
       </hm-navitem>
